@@ -1,0 +1,58 @@
+@import '../libraries/normalize.css';
+
+@font-face {
+    font-family: 'raleway';
+    src: url("../../fonts/RalewayRegular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url("../../fonts/RalewayBold.woff") format("woff");
+    font-weight: bold;
+    font-display: swap;
+}
+
+* {
+    font-family: raleway;
+}
+
+.grid {
+    display: grid;
+}
+
+.orange-button {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    background-color: #a24a10;
+    padding: 10px 60px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+}
+
+.orange-button:hover {
+    background-color: #e76d20;
+    -webkit-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
+
+.news-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1200px;
+    vertical-align: middle;
+}

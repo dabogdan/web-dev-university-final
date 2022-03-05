@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    this is needed for @media queries-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    characters-->
+    <meta charset="UTF-8">
+    <title>Legal Analysis</title>
+<!--    favicon-->
+    <link rel="icon" type="image/x-icon" sizes="192x192" href="assets/images/favicon.ico">
+<!--    font for different icons, put to header for quicker load of social icons-->
+    <link rel="stylesheet" href="style/libraries/fontawesome.min.css">
+</head>
+<body>
+<!--navigation-->
+<nav class="navbar">
+    <!--    container with grid-->
+    <div class="navbar__container grid">
+        <!--logo in the top left corner-->
+        <a href="index.html"><img src="assets/images/Logo_60x60.jpeg" alt="Logo Law Society"
+                                  class="navbar__logo"></a>
+        <!-- desktop menu-->
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="news.html" >News</a>
+            <!--            class active added to highlight the current page-->
+            <a href="analytics.html" class="active">Analytics</a>
+            <a href="contacts.html">Contact us</a>
+        </div>
+        <div class="navbar__social">
+            <a href="https://instagram.com/" class="fa fa-instagram insta-header"
+               target="_blank"></a>
+            <a href="https://facebook.com/" class="fa fa-facebook fb-header"
+               target="_blank"></a>
+        </div>
+        <!--        mobile menu-->
+        <div class="hamburger-menu">
+            <!--            checkbox to catch the users click-->
+            <input id="menu__toggle" type="checkbox">
+            <!--            this label transforms burger into cross with css-->
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <!--            mobile menu itself analog to desktop-->
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Home</a></li>
+                <li><a class="menu__item" href="categories.html">Categories</a></li>
+                <li><a class="menu__item" href="news.html" >News</a></li>
+                <li><a class="menu__item" href="analytics.html">Analytics</a></li>
+                <li><a class="menu__item" href="contacts.html" class="active">Contact us</a></li>
+                <!--                social media-->
+                <li><a href="https://instagram.com/" class="fa fa-instagram insta-header"
+                       target="_blank"></a></li>
+                <li><a href="https://facebook.com/" class="fa fa-facebook fb-header"
+                       target="_blank"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="layout">
+    <div class="layout__container container grid">
+        <div class="analytics-container grid">
+            <h1 class="analytics-header">Legal Analysis</h1>
+
+            <div class="analytics__sleeves" id="analytics-sleeves"></div>
+
+        </div>
+        <div class="sidebar">
+            <h1 class="sidebar-title">Most popular</h1>
+            <ul class="sidebar__popular grid" id="sidebar__popular"></ul>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer class="footer" id="footer">
+    <!--    containerization in 3-column grid -->
+    <div class="footer__container container grid">
+        <!--        left column with logo and site name-->
+        <div class="footer__logo">
+            <img src="assets/images/Logo-footer.png" alt="Footer Logo" class="footer__logo">
+            <h1><span>Legal</span> Gazeta.</h1>
+        </div>
+        <!--        mid column with the motto and some inviting text-->
+        <div class="motto" id="motto">
+            <h4>THE BEST LEGAL READING</h4>
+            <p>We cover nearly every major part of legal industry, and help you to stay on top of legal precedent in
+                practice
+                areas and corporate sectors that matter to you. You can also gain in-depth insight on trending topics
+                from industry mavens through our expert analysis content, and keep an eye on competitors with real-time
+                email alerts of breaking news.
+            </p>
+        </div>
+        <!--        right column with contacts and social media-->
+        <div class="footer__right">
+            <div class="footer__social grid">
+                <a href="https://instagram.com/" class="fa fa-instagram"
+                   target="_blank"></a>
+                <a href="https://facebook.com/" class="fa fa-facebook"
+                   target="_blank"></a>
+            </div>
+            <div class="footer__contacts">
+                <p>
+                    <strong>Our address:</strong>
+                    <br>0F9 90R, Ukraine, Kyiv Region,
+                    <br>Kyiv, Fictitious St, 100
+                    <br>Tel:
+                    <br>+38(050)3945879,
+                    <br>+38(098)2389769,
+                    <br><a href="mailto:info@legalgazeta.com">info@legalgazeta.com</a>
+                </p>
+                <p>
+                    <strong>Working hours:</strong>
+                    <br> Monday - Friday: 8:00 - 18:00
+                    <br> Saturday: 9:00 - 16:00
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--    rights reserved-->
+    <div class="footer__rights">All rights reserved. University of London, DB-2022 ©</div>
+</footer>
+
+<link rel="stylesheet" href="style/analytics.css">
+<script src="script/api.js"></script>
+<script src="script/sidebar.js"></script>
+<script src="script/analytics.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import "modules/main.css";
+@import "modules/menu.css";
+@import "modules/footer.css";
+@import "modules/sidebar.css";
+@import "modules/burger.css";
+
+body {
+    margin-top: 80px;
+}
+
+.layout__container {
+    grid-template-columns: 3fr 1.5fr;
+    grid-column-gap: 2rem;
+    grid-template-rows: auto;
+}
+
+.small-font {
+    margin: 0 0 0 49%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.big-font{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.sidebar {
+    grid-column: 2/3;
+}
+
+.article {
+    height: fit-content;
+}
+
+.article-img {
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    margin-bottom: 3rem;
+}
+
+.article-author{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+
+/* small desktop version */
+@media only screen and (max-width:1200px) {
+    .articles__container{
+        grid-template-columns: auto;
+    }
+}
+
+/* tablet version */
+@media only screen and (max-width:768px) {
+    .layout__container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .sidebar {
+        grid-column: auto;
+    }
+
+    .sidebar__img{
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .articles__container{
+        grid-template-columns: auto;
+    }
+}

@@ -1,0 +1,232 @@
+@import "modules/main.css";
+@import "modules/menu.css";
+@import "modules/footer.css";
+@import "modules/sidebar.css";
+@import "modules/burger.css";
+
+.main-header {
+    position: relative;
+    top: 0;
+    background-image: url("../assets/images/Header.jpeg");
+    overflow: hidden;
+    background-position: center top;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    height: 100vh;
+    color: white;
+    z-index: 1;
+    justify-content: center;
+    align-content: center;
+}
+
+.main-header::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+}
+
+.main-header .header-content {
+    position: relative;
+    text-align: center;
+    transform: translate(0, -50%);
+    margin-top: 50vh;
+    padding: 0 2rem;
+}
+
+.main-header .header-content .header-h1 {
+    margin: 0 auto 100px;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.main-header .header-content .header-h1 span {
+    color: #d55c0a;
+}
+
+.main-header .header-content .blinking-cursor {
+    font-weight: 100;
+    font-size: 4rem;
+    color: white;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+}
+
+.main-header .header-content .header-text {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 1rem 0 6rem;
+}
+
+.main-header .header-content .orange-button {
+    margin-top: 20px;
+}
+
+/* animation of the slogan*/
+
+.appear {
+    opacity: 1;
+    -webkit-animation: appear 1.5s forwards;
+    animation: appear 1.5s forwards;
+}
+
+@-webkit-keyframes appear {
+    from {
+        bottom: -300px;
+    }
+    to{
+        bottom: 0px;
+    }
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+}
+
+/* layout and sidebar */
+
+.layout__container {
+    grid-template-columns: 3fr 1.5fr;
+}
+
+.sidebar {
+    grid-column: 2/3;
+}
+
+.sidebar-title {
+    text-align: center;
+}
+
+.category-layout {
+    grid-column: 1/2;
+}
+
+.category-title {
+    grid-column: 1/1;
+    text-align: center;
+}
+
+
+/*----------------------------
+    card styles
+------------------------------*/
+
+.articles__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .2rem;
+}
+
+.articles__container > div:nth-of-type(n+4) {
+    display: none;
+}
+
+.article-card {
+    position: relative;
+    background-color: #f0f2f2;
+    margin: 0.3rem;
+    border: 1px solid rgba(100,100,100, 0.7);
+    max-width: 100%;
+    transition: transform .5s ease;
+}
+
+.article-card:hover {
+    transform: scale(1.03);
+    transition: transform .5s ease;
+}
+
+.article-card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.article-card a h2 {
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.article-card img {
+    top: 0;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-category {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    color: white;
+    background-color: darkred;
+    padding: .1rem 1rem;
+    max-width: fit-content;
+    font-weight: 700;
+}
+
+.card-shorts {
+    padding: 1rem;
+    height: 270px;
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+}
+
+.author .author-by {
+    color: #a24a10;
+}
+
+.show-more {
+    margin: 1rem 0;
+    cursor: pointer;
+    color: #a24a10;
+    text-align: center;
+}
+
+.show-more:hover {
+    color: #e76d20;
+}
+
+/* small desktop version */
+@media only screen and (max-width:1200px) {
+   .articles__container{
+       grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* tablet version */
+@media only screen and (max-width:768px) {
+    .layout__container {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .sidebar {
+        grid-column: auto;
+    }
+
+    .sidebar__img{
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .articles__container{
+        grid-template-columns: auto;
+    }
+}

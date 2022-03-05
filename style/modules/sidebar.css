@@ -1,0 +1,43 @@
+/*------------------
+sidebar
+-------------------*/
+.sidebar {
+    position: sticky;
+    margin-bottom: 70vh;
+    top: 70px;
+    height: 20vh;
+}
+
+.sidebar__popular {
+    grid-gap: 2rem;
+}
+
+.sidebar__element {
+    list-style-type: none;
+}
+
+.sidebar__item {
+    grid-template-columns: 1fr 3fr;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar__item:hover {
+    color: #d55c0a;
+}
+
+.sidebar__img {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+
+.sidebar__text {
+    margin: 0 0 0 5px;
+}
+
+@media only screen and (max-width:530px) {
+    .sidebar__popular{
+        padding-left: 0;
+    }
+}

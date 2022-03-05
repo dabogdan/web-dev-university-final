@@ -1,0 +1,115 @@
+/*------------------
+    burger menu
+------------------*/
+.hamburger-menu {
+    display: none;
+}
+/*make it always float right*/
+#menu__toggle {
+    opacity: 0;
+    float: right;
+    display: none;
+}
+/* if input checked - change burger to cross */
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+/* change positioning of the mobile menu */
+#menu__toggle:checked ~ .menu__box {
+    top: 0 !important;
+}
+/* burger button */
+.menu__btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    margin: .7rem;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition-duration: .2s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+/* mobile menu itself */
+.menu__box {
+    display: block;
+    top: -10000%;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 80px 0;
+    padding-top: 7%;
+    list-style: none;
+    opacity: 1;
+    transition: top 0.2s ease;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+.menu__item:hover {
+    background-color: #e76d20;
+}
+
+.insta-header, .fb-header {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    position: relative;
+    left: 48%;
+    margin-top: 0.7rem;
+}
+
+/* display mobile and hide desktop when viewport is less than 768px (most of the tablets) */
+
+@media only screen and (max-width:768px) {
+    .navbar .navbar__container .menu,
+    .navbar .navbar__container .navbar__social {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navbar__container {
+        grid-template-columns: 1fr 5fr;
+    }
+}

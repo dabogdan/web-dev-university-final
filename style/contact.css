@@ -1,0 +1,56 @@
+@import "modules/main.css";
+@import "modules/menu.css";
+@import "modules/footer.css";
+@import "modules/burger.css";
+
+.contact input, .support textarea {
+    border: none;
+    margin: 5px;
+    min-height: 2.3rem;
+    padding: 0 0 0 1rem;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.contact textarea {
+    border: none;
+    margin: 5px;
+    min-height: 2.3rem;
+    padding: 0.5rem 0 0 1rem;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.contact{
+    padding-top: 100px;
+    height: 100vh;
+    background-color: #DCDCDC;
+}
+
+.contact h2 {
+    text-align: center;
+    padding: 1rem 0 0;
+}
+
+.contact h5 {
+    text-align: center;
+    color: #A0A0A0;
+}
+
+.contact-form {
+    width: 60%;
+    min-width: 320px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#submit-btn {
+    background-color: #a24a10;
+    padding: 0;
+    width: 200px;
+    margin: 2rem auto;
+}
+
+#submit-btn:hover {
+    background-color: #e76d20;
+}

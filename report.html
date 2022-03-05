@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+</head>
+<body>
+
+
+INTRODUCTION:
+I am a lawyer and once I have made a website for lawyers on WordPress. I found that in our professional society we love reading legal news coupled with analysis.
+I decided to implement the following structure: home, categories, news, analysis, contacts and separate dynamic page for articles. I decided that given very small amount of pages (only 5), the structure will be horizontal, meaning all pages are equal and in the menu (except article.html - dynamic page for the article).
+
+INSPIRATION:
+1) most of the inspiration was from my previous experience where I tried to create something very similar
+2) this website to me is the most excellent example https://www.lawgazette.co.uk/news
+3) The other one where I got some of the ideas https://www.law.com/international-edition/?slreturn=20220205161712
+
+ACCESSIBILITY
+My website has explicit and black and white text of quite big font size, so it should is accessible for visually impaired people. Images have alt text.
+It is accessible for the elderly, or people with diminished visual capacity (option to change font size was added on article page, DOM manipulation with JS),
+Where text is written over the picture it has the background with some opacity to ensure it is not blurred by the picture colours. It is responsive to the most mobile devices and tested in all modern browsers.
+
+USABILITY
+Intuitive menu and navigation, it is clearly at the top and sticky, when you scroll the content.
+The page you are at is highlighted with the other colour to user knows where s/he is. Mobile navigation is also quite intuitive.
+The website is responsive, so that users has fully-blown experience in every device.
+
+LEARNING
+I have learnt:
+1) css animation, something I was always avoiding and thought it was difficult
+2) use of localStorage, although maybe not the best option, but allows making article content dynamic without PHP
+3) one of the sliders implementations
+
+EVALUATION I
+I was successful in creation of dynamic website, which serves as a template for the articles coming from the server in JSON format. I was aiming at making of modules which can be multiplied, like sidebar, footer, article and have done so as planned (that is philosophy behind the react.js). I was able to create dynamic article.html page, which changes the content depending on the click of user from the previous page. This is because I planned it in advance.
+I think design is also pretty useful and modern, this is primarily because I always had it in my mind.
+
+EVALUATION II
+I think use of localStorage is not good solution for dynamic article page, because user will not be able to go back to the article he has read, since article.html will show him what he has last in the localStorage. Maybe here I could have thought deeper about creation of the system, whereby localStorage stores data according to the pages visited, but again it is very limited, so the other solution, like PHP pages could be used for these purposes. I think also images could be compressed according to the device-width and given to the user according to his viewport.
+So, I should have thought about these things in advance. Also, I would change the slider maybe create my own one, because the one I used is not perfect and not speedy.
+There are also still too many duplications in HTML, CSS and JS (although I aimed at disposing of them), next time plan better to avoid repetitions.
+
+RESOURCES
+Pictures:
+All pictures are taken from the resources with the Creative Commons License https://creativecommons.org/licenses/?lang=ru
+
+1. Ukraine Supreme Court - https://commons.wikimedia.org/wiki/File:Ukraine_Supreme_Court.jpg
+2. Ukraine Supreme Court 2 - https://commons.wikimedia.org/wiki/File:Klov_Palace._Listed_ID_80-382-0462._-_8_Pylypa_Orlyka_Street,_Pechersk_Raion,_Kiev._-_Pechersk_28_09_13_396.jpg
+3. Donald Trump - https://upload.wikimedia.org/wikipedia/commons/a/a7/%D0%94%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%B4_%D0%A2%D1%80%D0%B0%D0%BC%D0%BF.jpg
+4. Lawyers - https://get.pxhere.com/photo/customs-finger-product-dress-shirt-hand-suit-formal-wear-laptop-part-coat-office-equipment-management-job-white-collar-worker-blazer-employment-nail-collaboration-business-laptop-thumb-tie-gesture-technology-office-supplies-netbook-businessperson-Office-instrument-document-computer-personal-computer-cuff-gadget-learning-Transparent-material-writing-Suit-trousers-portable-communications-device-1637035.jpg
+5. EU-UK flags - https://angliya.com/wp-content/uploads/2021/11/the-canary-1024x683.jpg
+6. Hammer - https://www.indianlegalassociation.org/images/slider/bg1.jpg
+7. Handcuffed kid - https://luskin.ucla.edu/wp-content/uploads/2021/04/juvenile-justice--1030x580.jpeg
+8. Justice roadsign - https://pix4free.org/assets/library/2021-01-20/originals/justice.jpg
+9. Data-centre - https://croie.luiss.it/wp-content/uploads/2021/04/data-center.jpg
+10. India-flag - https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/National_Flag_of_India_%2812153363006%29.jpg/1280px-National_Flag_of_India_%2812153363006%29.jpg
+11. Header - https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Law_Society%2C_Chancery_Lane%2C_London.jpg/2048px-Law_Society%2C_Chancery_Lane%2C_London.jpg
+
+
+Articles texts:
+NEWS:
+1. https://www.lawgazette.co.uk/news/ex-city-partner-struck-off-for-misleading-high-court-mounts-appeal/5111362.article
+2. https://www.lawgazette.co.uk/news/disbarral-for-fabricating-court-order-in-trump-dossier-case/5111419.article
+3. https://www.lawgazette.co.uk/news/solicitor-banned-after-not-paying-disbursements-for-seven-years/5111416.article
+4. https://www.lawgazette.co.uk/news-focus/news-focus-brexit-one-year-on/5111402.article
+5. https://www.lawgazette.co.uk/news/listen-to-prosecuted-solicitors-for-balanced-view-of-sra-says-society/5111427.article
+
+ANALYSIS
+1. https://www.lawgazette.co.uk/features/fear-not-future-of-lawyering-lies-with-you/5111378.article
+2. https://www.lawgazette.co.uk/commentary-and-opinion/without-reform-of-child-justice-things-will-get-bleaker-/5111193.article
+3. https://www.lawgazette.co.uk/features/rose-heilbron-willing-role-model-and-trailblazer-/5111347.article
+4. https://www.lawgazette.co.uk/commentary-and-opinion/pegasus-is-still-a-threat-to-solicitors/5111414.article
+5. https://www.lawgazette.co.uk/commentary-and-opinion/launch-of-uk-india-trade-talks/5111413.article
+
+
+Articles for programming used
+1. XMLHttpRequest vs Fetch API - https://www.sitepoint.com/xmlhttprequest-vs-the-fetch-api-whats-best-for-ajax-in-2019/
+2. Random name generator (authors of articles) - https://www.name-generator.org.uk/quick/
+
+Side Code Used:
+1. Dispose of browser predefined css - github.com/necolas/normalize.css
+2. Free Fontawesome for speedy icons - https://fontawesome.com/versions
+3. Slider - https://kenwheeler.github.io/slick/
+
+APPENDICES
+1) sitemap
+2) wire-frames
+3) mock-ups
+
+
+</body>
+</html>

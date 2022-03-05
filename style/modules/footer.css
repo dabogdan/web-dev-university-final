@@ -1,0 +1,87 @@
+.footer {
+    color: #fff;
+    background-color: #151504;
+    min-height: 50vh;
+    overflow: hidden;
+}
+
+.footer__container {
+    padding: 2rem 0 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.footer__container > div {
+    align-content: center;
+    text-align: center;
+}
+
+.footer__logo img {
+    width: 120px;
+    margin-top: 50px;
+}
+
+.footer__logo span {
+    color: #a24a10;
+}
+
+#motto {
+    margin: 50px 0 0;
+}
+
+#motto p, #motto h4 {
+    font-family: sans-serif;
+}
+
+.footer__rights {
+    margin: 2rem 0 2rem;
+    grid-column: 1/4;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.footer__container .footer__social {
+    align-content: normal;
+    margin: 50px 0 20px;
+    grid-template-columns: 50px 50px;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.footer__social a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__right .footer__social a:hover {
+    color: #a24a10;
+    transition: color .5s ease;
+}
+
+.footer__right .footer__contacts > * {
+    font-family: sans-serif;
+}
+
+.footer__right .footer__contacts a {
+    color: white;
+}
+
+.footer__right .footer__contacts a:hover {
+    color: #a24a10;
+    transition: color .5s ease;
+}
+
+/* mobile version */
+@media screen and (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: auto;
+    }
+    #motto {
+        padding: 0 2rem;
+    }
+    .footer__rights {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
