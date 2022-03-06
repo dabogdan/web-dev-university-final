@@ -1,3 +1,5 @@
+
+
 //select divs for articles
 const newsDiv = document.getElementById('news')
 const analysisDiv = document.getElementById('analysis')
@@ -11,8 +13,8 @@ let categories = []
 
 //calling general function from API
 function renderPage(data){
-    renderArticleCard(data)
-    renderSideBar(data)
+        renderArticleCard(data)
+        renderSideBar(data)
 }
 
 // loop through the data and allocate cards accordingly
